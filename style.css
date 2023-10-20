@@ -1,0 +1,346 @@
+a {
+    text-decoration: none;
+    color: rgb(137, 137, 137);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button {
+    border: none;
+}
+.container {
+    padding: 0 20px;
+}
+nav {
+    background-color: #f8f9fb;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 15px 20px -20px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav ul .nav-link{
+    color: #081d3c;
+    font-weight: bold;
+    margin: 0 5px;
+    text-transform: capitalize;
+    transition: all .5s ;
+}
+.nav-link:hover {
+    background-color: #f89595;
+    border-radius: 10px;
+    transform: scale(1.19);
+}
+.dropdown-menu hr {
+    height: 1px;
+    border: none;
+    background-color: #9c9c9c;
+}
+article {
+    background-color: #f0f0f2;
+    overflow: hidden    ;
+}
+.section1-left {
+    height: 128vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.section1-left h1 {
+    font-size: 6rem;
+    color: #081d3c;
+    margin-bottom: 30px;
+}
+.section1-left p {
+    font-size: 1.5rem;
+}
+.section1-left img {
+    width: 418px;
+} 
+.section1-left button,
+.section5-left button {
+    width: 200px;
+    margin-top: 30px;
+}
+.section1-left button a,
+.section5-left button a {
+    display: block; 
+    padding: 20px; 
+    position: relative; 
+    z-index: 2;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color:  white;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+    background-color: #ff361d;
+    border-radius: 10px;
+}
+.section1-left button a::after,
+.section5-left button a::after {
+    content: "";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    z-index: -1;
+}
+.section1-left button a:hover:after,
+.section5-left button a:hover:after {
+    width: 100%;
+    background-color: #081d3c;
+    border-radius: 10px;
+}
+@media (max-width: 1200px) { 
+    .section1-left img {
+        width: 300px;
+    }
+}
+@media (max-width: 768px) {
+    .section1-left {
+        height: 80vh;
+        align-items: center;
+    }
+    .section1-left img {
+        width: 200px;
+    }
+}
+section .container > h1 {
+    margin-top: 40px;
+    letter-spacing: -6px;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: black;
+}
+.section2 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: 1fr;
+    place-items: center ;
+    gap: 10px 10px;
+}
+.section2 div figure {
+    overflow: hidden;
+}
+.section2 img {
+    width: 370px;
+    transition: all .6s;
+}
+.section2 img:hover {
+    transform: scale(1.1);
+}
+.image {
+    text-align: center;
+}
+.image h2 {
+    font-size: 2rem;
+}
+.image p {
+    color: red;
+    font-size: 1.2rem;
+}
+@media (max-width: 1320px) { 
+    .section2 {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: 1fr;
+        place-items: center ;
+    }
+}
+@media (max-width: 825px) { 
+    .section2 {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr;
+        place-items: center ;
+    }
+}
+.section3 {
+    margin-top: 100px;
+    justify-content: center;
+    width: 98vw;
+}
+.section3 figure {
+    overflow: hidden;
+    height: 60vh;
+    
+}
+.section3 figure img {
+    transition: all .4s;
+}
+.section3 figure img:hover {
+    transform: scale(.97);
+    filter: brightness(75%);
+}
+.section3 figure:first-child,
+.section3 figure:first-child img{
+    padding-left: 0;
+}
+.section3 figure:last-child,
+.section3 figure:last-child img {
+    padding-right: 0;
+}
+.section3 figure:last-child img {
+    height: 48%;
+    width: 100%;
+}
+.section3 figure:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .text {
+    text-align: center;
+}
+.container .text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 60px;
+}
+.container .text p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 70%;
+    margin: 0 auto;
+}
+.section4 {
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section4-1  figure {
+    width: fit-content;
+    position: relative;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.section4-1  figure::before {
+    content: 'Add To Card';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    color: white;
+    font-size: 1.9rem;
+    background-color: #ff361d;
+    width: 100%;
+    padding: 15px;
+    transition: opacity .6s;
+}
+.section4-1 .text2 {
+    text-align: center;
+    width: 400px;
+}
+.section4-1 .text2 h2 {
+    font-size: 1.5rem;
+}
+.section4-1  img {
+    border-bottom: solid #ff361d 2px;
+}
+.section4-1  figure:hover:before,
+.section4-1  figure:hover .fa-heart {
+    opacity: 1;
+}
+.fa-heart {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    opacity: 0;
+}
+@media (max-width: 1200px) {
+    .section4 {
+        width: 400px;
+    }
+}
+@media (max-width: 968px) {
+    .section4-1 {
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.section5 {
+    margin-top: 80px;
+    align-items: center;
+}
+.section5 h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+.section5 p {
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+.section5-right img {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .section5-left {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .section5-right {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+footer {
+height: 90vh;
+
+}
+.footer1 {
+    background-color: red;
+    color: white;
+    margin-top: 60px;
+    padding: 20px;
+}
+.footer1-1 {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.footer1-1 h4 {
+    margin-top: 10px;
+}
+h5 {
+    font-weight: bold;
+}
+footer li {
+    margin: 15px 0;
+}
+footer li a:hover {
+    color: red;
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .icons {
+        flex-direction: column;
+    }
+    .icons > div {
+        margin-top: 20px;
+    }
+}
+.abdo {
+    font-weight: bold;
+    color: black;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.fa-brands {
+    color: black;
+}
